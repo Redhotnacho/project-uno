@@ -1,0 +1,23 @@
+{
+  "name": "project-uno",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "servor src/ index.html 1234 --reload"
+  },
+  "keywords": [
+    "html",
+    "javascript",
+    "project"
+  ],
+  "author": "NachoDev",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2",
+  "type": "module",
+  "devDependencies": {
+    "oxfmt": "^0.47.0",
+    "oxlint": "^1.62.0",
+    "servor": "^4.0.2"
+  }
+}
