@@ -1,4 +1,75 @@
 body {
-  background: #eb9e9e;
+  background: #333030;
   color: #fff;
+}
+
+.mark-red {
+  background: rgb(240, 36, 9);
+  color: #fff;
+}
+
+.mark-green {
+  background: rgb(36, 240, 9);
+  color: #fff;
+}
+
+.mark-blue {
+  background: rgb(36, 9, 240);
+  color: #fff;
+}
+
+.pergamino {
+  max-width: 720px;
+  margin: 1.25rem auto;
+  padding: 1.5rem 2rem;
+  background:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.012) 0 1px, transparent 1px 30px),
+    radial-gradient(800px 300px at 10% 20%, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0) 12%),
+    radial-gradient(300px 120px at 85% 80%, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0) 20%),
+    linear-gradient(180deg, #f7ead0, #ecd6a8);
+  color: #352715;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22),
+    inset 0 6px 20px rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  position: relative;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.pergamino::before,
+.pergamino::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  height: 26px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.06));
+  z-index: -1;
+  transform: rotate(-2deg);
+  border-radius: 8px;
+  filter: blur(0.4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.14);
+}
+.pergamino::after {
+  top: auto;
+  bottom: -12px;
+  transform: rotate(2deg);
+}
+
+.pergamino ol {
+  list-style: upper-roman;
+  margin: 0;
+  padding-left: 2.2rem;
+}
+.pergamino li {
+  padding: 0.35rem 0;
+}
+
+.tv {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }

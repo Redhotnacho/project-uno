@@ -1,28 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 30-day challenge</title>
+    <meta
+      name="description"
+      content="Desafío de 30 días para aprender HTML, CSS y JavaScript. Cada día se presenta un nuevo desafío para mejorar tus habilidades en desarrollo web."
+    />
+    <meta name="keywords" content="html, lenguaje, lenguaje de marcado, código html, etiqueta" />
+    <meta name="author" content="Nachodev" />
+    <link rel="stylesheet" href="./index.css" />
     <script src="./index.js"></script>
-</head>
-<body>
-    <h1>Bienvenido!</h1>
+  </head>
+  <body>
+    <h1>Día 1: Crea una página HTML con código CSS desde un archivo diferente.</h1>
+    <p>&lt;link rel="stylesheet" href="./index.css"&gt;</p>
+
+    <h1>Día 2: Crea una página con un titular, varios párrafos de texto y una imagen.</h1>
+    <h2>Bienvenido!</h2>
     <p>Hola Mundo!</p>
     <p>Hola Mundo 2</p>
     <p>Hola Mundo 3</p>
-    <p>Hola Mundo 4</p>
-    <p>Hola Mundo 5</p>
-    <p>Hola Mundo 6</p>
-    <p>Hola Mundo 7</p>
+    <img src="assets/images/g6e.jpg" alt="Primera imagen" />
+    <image-slider value="1">
+      <img src="assets/images/g6e.jpg" alt="Primera imagen" />
+      <img src="assets/images/gcc.jpg" alt="Segunda imagen" />
+      <img src="assets/images/geb.jpg" alt="Tercera imagen" />
+      <img src="assets/images/ghh.jpg" alt="Cuarta imagen" />
+    </image-slider>
 
-<image-slider value="1">
-  <img src="assets/images/g6e.jpg" alt="Primera imagen">
-  <img src="assets/images/gcc.jpg" alt="Segunda imagen">
-  <img src="assets/images/geb.jpg" alt="Tercera imagen">
-  <img src="assets/images/ghh.jpg" alt="Cuarta imagen">
-</image-slider>
+    <h1>
+      Día 3: Construye una página con un párrafo que tenga enlaces internos y externos (a otros
+      sitios web).
+    </h1>
+    <p>Enlace a página web externa: <a href="https://manz.dev/">Manz.dev</a>.</p>
+    <p>Enlace a página web interna: <a href="./index2.html">Página secundaria</a>.</p>
 
-</body>
+    <h1>
+      Día 4: Valida el código HTML de tus ejemplos anteriores (y los siguientes a partir de ahora).
+    </h1>
+    <p>https://validator.w3.org/nu/#textarea</p>
+    <p>Document checking completed. No errors or warnings to show.</p>
+
+    <h1>Día 5: Ponle un título y una descripción al documento, ideal para SEO.</h1>
+    <p>&lt;title&gt;HTML 30-day challenge&lt;/title&gt;</p>
+    <p>
+      &lt;meta name="description" content="Desafío de 30 días para aprender HTML, CSS y JavaScript.
+      Cada día se presenta un nuevo desafío para mejorar tus habilidades en desarrollo web."&gt;
+    </p>
+    <p>
+      &lt;meta name="keywords" content="html, lenguaje, lenguaje de marcado, código html,
+      etiqueta"&gt;
+    </p>
+    <p>&lt;meta name="author" content="Nachodev"&gt;</p>
+
+    <h1>Día 6: Crea un grupo de secciones (acordeón) donde se despliegue sólo uno a la vez.</h1>
+    <details name="acordeon" open>
+      <summary>Sección 1</summary>
+      <div>Este es el contenido del primer acordeón.</div>
+    </details>
+
+    <details name="acordeon">
+      <summary>Sección 2</summary>
+      <div>Este es el contenido del segundo acordeón.</div>
+    </details>
+
+    <details name="acordeon">
+      <summary>Sección 3</summary>
+      <div>Este es el contenido del tercer acordeón.</div>
+    </details>
+
+    <h1>Día 7: Coloca una imagen en formato JPEG-XL. Si el navegador no la soporta, que use AVIF. Sino, que use JPG.</h1>
+    <picture>
+      <source srcset="assets/images/eye-sample.jxl" type="image/jxl" >
+      <source srcset="assets/images/eye-sample.avif" type="image/avif" >
+      <img src="assets/images/eye-sample.jpg" alt="Imagen con formatos alternativos" width="300" height="300">
+    </picture>
+
+    <h1>Día 8: Crear un párrafo de texto con palabras destacadas en diferentes colores.</h1>
+    <p>Este texto, inicialmente no resaltado, <mark>está ahora marcado amarillo</mark>,
+    <mark class="mark-blue">este otro está marcado azul</mark>, <mark class="mark-red">este está marcado rojo</mark>
+    y <mark class="mark-green">este otro está marcado verde</mark>.</p>
+
+    <h1>Día 9: Crea un pergamino con una lista de objetos, donde se numere con números romanos (mayúsculas).</h1>
+    <div class="pergamino">
+        <ol type="I">
+            <li>Primer objeto</li>
+            <li>Segundo objeto</li>
+            <li>Tercer objeto</li>
+            <li>Cuarto objeto</li>
+            <li>Quinto objeto</li>
+            <li>Sexto objeto</li>
+            <li>Séptimo objeto</li>
+            <li>Octavo objeto</li>
+            <li>Noveno objeto</li>
+            <li>Décimo objeto</li>
+        </ol>
+    </div>
+    
+    <h1>Día 10: Busca 5 videos de youtube. Inserta uno en la página. Haz que se pueda cambiar entre ellos como una TV. Dale estilo con CSS para que se vea más bonito.</h1>
+    
+
+
+  </body>
 </html>
