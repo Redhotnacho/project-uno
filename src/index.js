@@ -241,3 +241,49 @@ class ImageSlider extends HTMLElement {
 }
 
 customElements.define("image-slider", ImageSlider);
+
+// --- TV player switcher ---
+(function () {
+  const videos = [
+    { id: "M7lc1UVf-VE", title: "Demo: YouTube sample" },
+    { id: "gRmNYWR3oGc", title: "Video 2" },
+    { id: "ScMzIvxBSi4", title: "Video 3" },
+    { id: "YE7VzlLtp-4", title: "Video 4" },
+    { id: "3fumBcKC6RE", title: "Video 5" },
+  ];
+
+  function setVideoByIndex(idx) {
+    const clamped = ((idx % videos.length) + videos.length) % videos.length;
+    const entry = videos[clamped];
+    const iframe = document.getElementById("tv-player");
+    if (!iframe) return;
+    iframe.src = `https://www.youtube.com/embed/${entry.id}?rel=0`;
+    document.querySelectorAll(".tv-btn").forEach((b, i) => {
+      b.classList.toggle("active", i === clamped);
+      b.setAttribute("aria-pressed", i === clamped ? "true" : "false");
+    });
+    const info = document.getElementById("tv-info");
+    if (info) info.textContent = entry.title || `Video ${clamped + 1}`;
+  }
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest && e.target.closest(".tv-btn");
+    if (!btn) return;
+    const buttons = Array.from(document.querySelectorAll(".tv-btn"));
+    const idx = buttons.indexOf(btn);
+    if (idx >= 0) setVideoByIndex(idx);
+  });
+
+  // initialize on DOM ready
+  document.addEventListener("DOMContentLoaded", () => {
+    const info = document.getElementById("tv-info");
+    if (info && !info.textContent.trim()) info.textContent = videos[0].title;
+  });
+})();
+
+// meter
+const meter = document.getElementById("tickets");
+const texto = document.getElementById("span-meter");
+
+// Asignamos el valor del meter al texto del span
+texto.textContent = meter.value + "/100";

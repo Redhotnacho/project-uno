@@ -11,7 +11,8 @@
     <meta name="keywords" content="html, lenguaje, lenguaje de marcado, código html, etiqueta" />
     <meta name="author" content="Nachodev" />
     <link rel="stylesheet" href="./index.css" />
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <h1>Día 1: Crea una página HTML con código CSS desde un archivo diferente.</h1>
@@ -100,8 +101,67 @@
     </div>
     
     <h1>Día 10: Busca 5 videos de youtube. Inserta uno en la página. Haz que se pueda cambiar entre ellos como una TV. Dale estilo con CSS para que se vea más bonito.</h1>
+    <section class="tv-section" aria-labelledby="tv-title">
+      <div class="tv-player-wrapper">
+        <div class="tv-frame">
+          <iframe id="tv-player" src="https://www.youtube.com/embed/M7lc1UVf-VE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="tv-controls" role="tablist" aria-label="Control de vídeos">
+          <div class="tv-buttons" role="tablist">
+            <button class="tv-btn active" data-video="M7lc1UVf-VE" aria-pressed="true">1</button>
+            <button class="tv-btn" data-video="gRmNYWR3oGc">2</button>
+            <button class="tv-btn" data-video="ScMzIvxBSi4">3</button>
+            <button class="tv-btn" data-video="YE7VzlLtp-4">4</button>
+            <button class="tv-btn" data-video="3fumBcKC6RE">5</button>
+          </div>
+          <div class="tv-info" id="tv-info">Video 1</div>
+        </div>
+      </div>
+    </section>
     
+    <h1>Día 11: Escribe un texto con super/subíndices (fórmulas químicas, por ejemplo).</h1>
+    <p>El agua es una molécula compuesta por dos átomos de hidrógeno y uno de oxígeno, representada como H<sub>2</sub>O.</p>
+    <p>La fórmula de la energía es E = mc<sup>2</sup>.</p>
 
+    <h1>Día 12: Crea un slider que permita seleccionar un número entre 1-50 y lo muestre en vivo al cambiar. Requiere algo de Javascript.</h1>
+    <label>Selecciona un número:</label>
+    <input type="range" onInput="this.nextElementSibling.value = this.value" min="1" max="50" value="25">
+    <output>25</output>
+
+    <h1>Día 13: Crea una barra medidora que muestre los tickets vendidos en un cine (Ejemplo: 64/100 tickets vendidos).</h1>
+    
+    <form method="post" action="/send/">
+        <label>Tickets vendidos:</label>
+        <meter id="tickets" value="100" max="100" low="25" high="75" optimum="0"></meter>
+        <span id="span-meter"></span>
+    </form>
+
+    <h1>Día 14: Muestra un bloque de fragmento de código CSS en una página. Si quieres ir al máximo, añade una librería Javascript para añadirle resaltado de colores.</h1>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script type="module">
+        Prism.highlightAll();
+    </script>
+    <pre>
+        <code class="language-css">
+            body {
+                background: #333030;
+                color: #fff;
+                font-family: "Mononoki Nerd Font", "Courier New", Courier;
+            }
+        </code>
+    </pre>
+
+    <h1>Día 15: Crea una página con un video MP4 (no de youtube), que muestre una imagen de portada antes de darle a reproducir.</h1>
+    <video controls poster="assets/images/eye-sample.jpg" width="640" height="360">
+        <source src="assets/videos/video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <h1>Día 16: Muestra un texto con el atajo de teclado CTRL+ALT+SUPR y dale estilo para que parezcan teclas.</h1>
+    <p>
+        Para abrir la pantalla de seguridad en Windows,
+        pulsa la combinación de teclas <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>SUPR</kbd>.
+    </p>
 
   </body>
 </html>

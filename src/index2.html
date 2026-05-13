@@ -8,5 +8,15 @@
   </head>
   <body>
     <h1>Bienvenido a la página secundaria!</h1>
+    <meter id="votos" min="0" max="100" value="75"></meter>
+    <span id="valor-texto"></span>
+    <script>
+        const meter = document.getElementById('votos');
+        const texto = document.getElementById('valor-texto');
+
+        // Asignamos el valor del meter al texto del span
+        texto.textContent = meter.value + "%";
+
+    </script>
   </body>
 </html>
